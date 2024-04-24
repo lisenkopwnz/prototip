@@ -1,14 +1,16 @@
-#import os
-#n = os.path.abspath("множество.txt")
-#print(n)
+class Data:
+    def __init__(self,data,nem ):
+        self.data = 'C:\\games\\{self.data}'
+        self.nem = nem
 
-
+    def __str__(self):
+        return ({self.data},{self.nem})
 
 try:
-    with open('C:\\games\\q.txt','r') as f,open('C:\\games\\w.txt','a')as v:
+    with open('C:\\games\\q.txt','r') as f:
         data = f.read()
-        v.write(data)
-
+        nem = data.split()[0].strip()
+        pt=Data(data,nem)
 except:
     print('f')
-
+print(pt.__str__())
